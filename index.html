@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
+  <title>Five-Fingers</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    body {
+      font-family: "Recursive", sans-serif;
+      background-color: black;
+      color: whitesmoke;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 75vh; /* Set minimum height to viewport height */
+      overflow: hidden;
+    }
+    #container {
+      text-align: center;
+    }
+    #container {
+      text-align: center;
+    }
+    #container2 {
+      text-align: center;
+      position: fixed; bottom: 0px;
+    }
+    .startbutton {
+      font-family: "Recursive", sans-serif;   
+      color: whitesmoke;
+      background-color: #141414;
+      border: 1px solid rgba(54, 54, 54, 0.6);
+      font-weight: 600;
+      outline: none;
+      border-radius: 50px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 45px;
+      width: 130px;
+    }
+    
+    #coupon-image {
+      margin-top: 20px;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Five-Fingers</h1>
+    <button id="beginButton" class="startbutton">Begin</button>
+    <div id="loadingMessage" style="display: none;">Loading...</div>
+    <div id="couponScreen" style="display: none;">
+      <h2>Coupon Details</h2>
+      <p><strong>Discount:</strong> £75.99</p>
+      <p><strong>Expires:</strong> 12/06/28</p>
+      <p><strong>Usage Range:</strong> No Limit</p>
+      <img id="coupon-image" src="" alt="Coupon Image">
+    </div>
+  </div>
+  <div id="container2"> made with 🥨 by 𑪽 <br><br></div>
+  <script>
+    document.getElementById('beginButton').addEventListener('click', function() {
+      document.getElementById('beginButton').style.display = 'none';
+      document.getElementById('loadingMessage').style.display = 'block';
+      setTimeout(function() {
+        document.getElementById('loadingMessage').innerText = 'Scraping CCAPI...';
+      }, 2200);
+      setTimeout(function() {
+        document.getElementById('loadingMessage').innerText = 'Scraping CPNS API...';
+      }, 4600);
+      setTimeout(function() {
+        document.getElementById('loadingMessage').style.display = 'none';
+        document.getElementById('couponScreen').style.display = 'block';
+        document.getElementById('coupon-image').src = 'https://i.ibb.co/17XmtXw/imgonline-com-ua-Negative-Wf-P2-FMp-Bz-Tqp-Y88-A-transformed.jpg';
+      }, 7000);
+    });
+  </script>
+</body>
+</html>
