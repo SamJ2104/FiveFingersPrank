@@ -68,22 +68,26 @@
     </div>
   </div>
   <div id="container2"> made with 🥨 by 𑪽 <br><br></div>
-  <script>
-    document.getElementById('beginButton').addEventListener('click', function() {
-      document.getElementById('beginButton').style.display = 'none';
-      document.getElementById('loadingMessage').style.display = 'block';
-      setTimeout(function() {
-        document.getElementById('loadingMessage').innerText = 'Scraping CCAPI...';
-      }, 2200);
-      setTimeout(function() {
-        document.getElementById('loadingMessage').innerText = 'Scraping CPNS API...';
-      }, 4600);
-      setTimeout(function() {
-        document.getElementById('loadingMessage').style.display = 'none';
-        document.getElementById('couponScreen').style.display = 'block';
-        document.getElementById('coupon-image').src = 'https://i.ibb.co/R4PSmFT/IMG-3393.jpg';
-      }, 7000);
-    });
-  </script>
+<script>
+  document.getElementById('beginButton').addEventListener('click', function() {
+    document.getElementById('beginButton').style.display = 'none';
+    document.getElementById('loadingMessage').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('loadingMessage').innerText = 'Scraping CCAPI...';
+    }, 2200);
+    setTimeout(function() {
+      document.getElementById('loadingMessage').innerText = 'Scraping CPNS API...';
+    }, 4600);
+    setTimeout(function() {
+      document.getElementById('loadingMessage').style.display = 'none';
+      document.getElementById('couponScreen').style.display = 'block';
+      var couponImage = document.getElementById('coupon-image');
+      couponImage.src = 'https://i.ibb.co/X3V34wh/IMG-3394.jpg';
+      couponImage.addEventListener('click', function() {
+        this.src = 'https://i.ibb.co/R4PSmFT/IMG-3393.jpg';
+      });
+    }, 7000);
+  });
+</script>
 </body>
 </html>
